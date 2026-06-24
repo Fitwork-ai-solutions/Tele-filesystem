@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Toaster } from "sonner";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "TelegramDrive — Free Cloud Storage",
@@ -17,8 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="antialiased">
-        {children}
-        <Toaster richColors position="bottom-right" />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
