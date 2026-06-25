@@ -4,6 +4,8 @@ import { createServerClient } from "@/lib/supabase";
 import { createFolderSchema } from "@/lib/validators";
 import { buildFolderTree } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const auth = await getAuthFromCookie();

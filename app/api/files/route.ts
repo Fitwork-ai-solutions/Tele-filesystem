@@ -3,6 +3,8 @@ import { getAuthFromCookie } from "@/lib/auth";
 import { createServerClient } from "@/lib/supabase";
 import { sendFileToChatId } from "@/lib/telegram";
 import { sanitizeFilename } from "@/lib/utils";
+
+export const dynamic = "force-dynamic";
 import { fileQuerySchema } from "@/lib/validators";
 
 const MAX_FILE_SIZE = (Number(process.env.MAX_FILE_SIZE_MB) || 2000) * 1024 * 1024;

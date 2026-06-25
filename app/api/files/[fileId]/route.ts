@@ -3,6 +3,8 @@ import { getAuthFromCookie } from "@/lib/auth";
 import { createServerClient } from "@/lib/supabase";
 import { deleteMessage } from "@/lib/telegram";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(
   _request: NextRequest,
   { params }: { params: Promise<{ fileId: string }> }

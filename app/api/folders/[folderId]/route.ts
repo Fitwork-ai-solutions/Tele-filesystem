@@ -3,6 +3,8 @@ import { getAuthFromCookie } from "@/lib/auth";
 import { createServerClient } from "@/lib/supabase";
 import { updateFolderSchema } from "@/lib/validators";
 
+export const dynamic = "force-dynamic";
+
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ folderId: string }> }
